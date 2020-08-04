@@ -85,7 +85,7 @@ define( "LANGUAGE", "PHP");
     
 // test 2
 define( "LANGUAGE", "JAVA");
-    echo LANGUAGE;
+    echo LANGUAGE; 
     
 // test 3
     $LANGUAGE ="JAVA";

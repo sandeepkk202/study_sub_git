@@ -15,7 +15,7 @@ function inputdata($a, $b){
 inputdata(0, 5);
 
 echo "<hr>";
-
+// Exception with method
 function catch_error($exception){
     echo $exception->getMessage();
 }

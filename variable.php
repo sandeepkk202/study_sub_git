@@ -36,13 +36,13 @@ global $counter;
 $counter = 1;
 global $counter2;
 $counter2 = "hi";
-function show_Glob_counter(){
+function show_G_counter(){
     global $counter;
     global $counter2;
     echo "\nshow_Global_counter =".$counter."<br
 >";
 }
- show_Glob_counter();
+ show_G_counter();
 
 // Static counter
 function stat_counter(){
@@ -85,7 +85,7 @@ define( "LANGUAGE", "PHP");
     
 // test 2
 define( "LANGUAGE", "JAVA");
-    echo LANGUAGE; 
+    echo LANGUAGE;
     
 // test 3
     $LANGUAGE ="JAVA";

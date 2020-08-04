@@ -1,20 +1,20 @@
 <?php
-//function inputdata($a, $b){
-//    try{
-//        if($a <= 0 || $b <= 0){
-//        throw new Exception("Error:Number must be greater then 0");
-//        }else{
-//        echo $result = $a / $b;
-//        }
-//           
-//    }catch(Exception $e){
-//        echo "Eception :-".$e->getMessage();
-//    }
-//}
-//
-//inputdata(0, 5);
+function inputdata($a, $b){
+    try{
+        if($a <= 0 || $b <= 0){
+        throw new Exception("Error:Number must be greater then 0");
+        }else{
+        echo $result = $a / $b;
+        }
+           
+    }catch(Exception $e){
+        echo "Eception :-".$e->getMessage();
+    }
+}
 
+inputdata(0, 5);
 
+echo "<hr>";
 
 function catch_error($exception){
     echo $exception->getMessage();

@@ -36,13 +36,13 @@ global $counter;
 $counter = 1;
 global $counter2;
 $counter2 = "hi";
-function show_G_counter(){
+function show_Glob_counter(){
     global $counter;
     global $counter2;
     echo "\nshow_Global_counter =".$counter."<br
 >";
 }
- show_G_counter();
+ show_Glob_counter();
 
 // Static counter
 function stat_counter(){

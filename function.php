@@ -6,6 +6,7 @@ function even_number($limit){
     if($num%2==0)
         echo $num.", ";
 }}
+
 // Call a function
 even_number("10");
 

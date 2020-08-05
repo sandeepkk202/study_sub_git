@@ -69,3 +69,50 @@ $result = scandir($path);
 //r Reade mode
 //w Write mode
 //a append mode "last of the line"
+
+# Mathod 1
+$fileName = "testing.php";
+
+# Get content
+$content = file_get_contents($fileName);
+echo $content."<hr>";
+    
+# Method 2
+# Open a file
+//$fileHandler = fopen($fileName, "r");
+//$fileSize = filesize($fileName);
+
+# Read the file content
+//$content = fread($fileHandler, $fileSize);
+//echo $content;
+
+# Close the file
+//fclose($fileHandler);
+
+# Write file - method1
+//$fileHandler = fopen($fileName, "w") or die("Unable to write the file");
+//fwrite($fileHandler, "This is the line new added");
+//fclose($fileHandler);
+
+# Write file - method2
+//file_put_contents($fileName, "This the modified by file_put_content() function");
+
+# Read config file like (.ini)
+$fileIni = "testing2.ini";
+$settings = parse_ini_file($fileIni);
+print_r($settings); echo "<hr>";//you can use for it foreach or array element[] as well
+
+# Read and write CSV data
+$fileCsv = "testing.csv";
+//$content = file_get_contents($fileCsv); //read entire content
+//print_r($content); echo "<hr>";
+
+//$csvFile = file($fileCsv);  //read line by line
+//var_dump($csvFile);
+//foreach($csvFile as $x){
+//    $data[] = str_getcsv($x); //also use
+//        print_r($data);
+//}
+
+//$csv = array_map('str_getcsv', file($fileCsv));
+//print_r($csv);

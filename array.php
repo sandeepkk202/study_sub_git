@@ -1,15 +1,15 @@
 <?php 
-//
+
 $arr=[1,"2",3.7];
-//
+
 # funaction to print array
-// 
+ 
     var_dump($arr);
-//
+
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # Human readable   
 //    print_r($arr);
-//
+
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # ACCESS AND PRINT ARRAY
 //    echo "$arr[1]";
@@ -17,7 +17,6 @@ $arr=[1,"2",3.7];
 //    echo $arr[1];
 //    echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
     
-
 # $arr is a Array Variable
 # $arr[0] is a Array Element
 # 0 is a index of Array 
@@ -71,17 +70,17 @@ var_dump($arr);
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # PRINT THE KEY
 //print_r(array_keys($arr));
-//
+
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # ACCESS ONLY THE KEYS
 //foreach(array_keys($arr) as $xKey)
 //    echo $xKey." , ";
-//
+
 echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # mixed index & associatev array
 $arr =[ 1 => "sunday", 2 => "monday", "tus" => "Tusday", "wed" => "Wednesday", "thu", "fri", "sat" ,"&" => "and"];
 echo var_dump($arr);
-//
+
 echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 #  MULTI Dimenssion Array like = [[]] *array inside array*
 $arr=[[0,1,2,3,4],[5,6,7],[8,9]];
@@ -109,21 +108,21 @@ echo var_dump($arr);
 //echo "<br>===========================<br>";
 //foreach($arr as $xValue)
 //    echo var_dump($xValue);
-//
+
 //echo "<br>======================================<br>";
 //foreach($arr as $topValue){
 //    echo "[";
 //    foreach($topValue as $innerValue)
 //        echo $innerValue." , ";
 //    echo "], ";}
-//
+
 //echo "<br>================================================<br>";
 //foreach($arr as $topKey => $topValue){
 //    echo "$topKey"."[";
 //    foreach($topValue as $innerValue)
 //        echo $innerValue." , ";
 //    echo "], ";}
-//
+
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # sort() and rsort() for Indexed Array
 //$arr =[3,5,2,4,1];
@@ -134,7 +133,7 @@ echo var_dump($arr);
 //echo "<br>"; 
 //rsort($arr);
 //print_r($arr);
-//
+
 //echo "<br>===========================<br>";
 # asort() and arsort() for Associative Array sort by value
 //$arr =["2" => "john", "3" => "rahul", "1" => "kumar"];
@@ -145,7 +144,7 @@ echo var_dump($arr);
 //echo "<br>"; 
 //arsort($arr);
 //print_r($arr);
-//
+
 //echo "<br>=====================================<br>";
 # ksort() and krsort() for Associative Key Array sort by key
 //$arr =["2" => "john", "3" => "rahul", "1" => "kumar"];
@@ -156,23 +155,23 @@ echo var_dump($arr);
 //echo "<br>"; 
 //krsort($arr);
 //print_r($arr);
-//
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
-#COPY ARRAY
 
-#Sample 1
+//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+# COPY ARRAY
+
+# Sample 1
 //$arr =[3,5,2,4,1];
 //$arr1 = $arr;
 //print_r($arr1);
 //echo "<br>";
-//
-#sample 2
+
+# sample 2
 //foreach($arr as $x)
 //    $arr2[] = $x;
 //print_r($arr2);
 //echo "<br>";
-//
-#sample 3
+
+# sample 3
 //$arr3 = ["2" => "john", "3" => "rahul", "1" => "kumar"];
 //$arr4 = $arr3;
 //print_r($arr4);
@@ -183,28 +182,27 @@ echo var_dump($arr);
 //foreach($arr3 as $xKey => $x)
 //    $arr5[$xKey] = $x;
 //print_r($arr5);
-//
+
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 
-#convert STRING TO ARRAY
+# Convert STRING TO ARRAY
 //$days = "mon, tus, wed, thu, fri, sat";
 //$days_arr = explode(",",$days);
 //print_r($days_arr);
 
-#convert ARRAY TO STRING 
+# Convert ARRAY TO STRING 
 //echo "<br>";
 //$days_str = implode(",",$days_arr);
 //print_r($days_str);
 
-#Limited no of array element
+# Limited no of array element
 //echo "<br>";
 //$Limited_days = explode(",", $days, 3);
 //print_r($Limited_days);
-//
+
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 
-#array Exercise
-//
+# Array Exercise
 //$company = [
 //    "boss" => [
 //        "Teamleader" => [ "Sandeep" => [ "Ashish" => "PHP" ],
@@ -213,7 +211,7 @@ echo var_dump($arr);
 //                        ]   
 //             ]
 //            ];
-//
+
 //foreach($company as $coKey => $co ){
 //       echo $coKey." = ";
 //    foreach($co as $LeaderKey => $leader )

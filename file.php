@@ -37,8 +37,8 @@ $result = scandir($path);
 //echo "<hr>";
 
 //echo "<hr>";
-#Create a Directory
 
+#Create a Directory
 //if(!file_exists("mkfolder")){
 //    mkdir("mkfolder");
 //}
@@ -95,7 +95,7 @@ echo $content."<hr>";
 //fclose($fileHandler);
 
 # Write file - method2
-//file_put_contents($fileName, "This the modified by file_put_content() function");
+//file_put_contents($fileName, "This the modified by file_put_content() function"); //Rewrite
 
 # Read config file like (.ini)
 $fileIni = "testing2.ini";
@@ -106,13 +106,31 @@ print_r($settings); echo "<hr>";//you can use for it foreach or array element[] 
 $fileCsv = "testing.csv";
 //$content = file_get_contents($fileCsv); //read entire content
 //print_r($content); echo "<hr>";
-
+#
 //$csvFile = file($fileCsv);  //read line by line
 //var_dump($csvFile);
 //foreach($csvFile as $x){
 //    $data[] = str_getcsv($x); //also use
 //        print_r($data);
 //}
-
+#
 //$csv = array_map('str_getcsv', file($fileCsv));
 //print_r($csv);
+
+#File exercise
+#Creat file
+//$file_ref = fopen("newfile.txt", "w"); //""Create a file""
+//
+//fwrite($file_ref, "This is the new file");  //""Write a file""
+//
+//fclose($file_ref); //""Save a file""
+
+#Read file
+//file_put_contents("newfile.txt", "Read file exercise", FILE_APPEND); //Append content in file
+//
+//$file_ref = fopen("newfile.txt", "r"); //""Create/Read a file""
+//
+//$content = fread($file_ref,filesize("newfile.txt"));
+//
+//echo $content;
+//fclose($file_ref); //""Save a file""

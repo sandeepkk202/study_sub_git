@@ -1,1 +1,1 @@
-This the modified by file_put_content() function
+Rewrite by file_put_content() function

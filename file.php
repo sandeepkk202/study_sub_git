@@ -3,8 +3,9 @@
 #scandir();
 
 $path = "Testfolder1";
-$result = scandir($path);
-////var_dump($result);
+$result = scandir($path); //scan dir/folder and reture in array 
+var_dump($result);
+echo "<hr>";
 
 #Glob
 //$result = glob("*.php");

@@ -49,7 +49,7 @@ echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # ================ ASSOCIATIVE ARRAY ================
 # ASSOCIATIVE array is pair of "key and value"
 $arr = ["sun" => "Sunday", "mon" => "Monday", "tus" => "Tusday", "wed" => "Wednesday", "thu" => "Thursday", "fri" => "Friday", "sat" => "Saturday"];
-var_dump($arr);
+//var_dump($arr);
 //foreach($arr as $xKey => $xValue)
 //    echo $xKey."=>"."$xValue<br>";
 
@@ -198,7 +198,7 @@ echo var_dump($arr);
 # Limited no of array element
 //echo "<br>";
 //$Limited_days = explode(",", $days, 3);
-//print_r($Limited_days);
+//print_r($Limited_days); for limit
 
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 

@@ -1,0 +1,26 @@
+apt install supervisor
+
+cd /etc/supervisor/conf.d/
+
+vi dispatch.conf
+
+add below data
+
+
+[program:dispatch]
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/html/dispatch/artisan queue:work redis --sleep=1 --tries=1 --timeout=0
+autostart=true
+autorestart=true
+user=root
+numprocs=2
+redirect_stderr=true
+stdout_logfile=/var/www/html/dispatch/storage/logs/worker.log                                                                    ##check folder name in html 
+
+
+run bleow command:-
+
+supervisorctl reread
+supervisorctl update
+supervisorctl start dispatch:*
+systemctl restart supervisor

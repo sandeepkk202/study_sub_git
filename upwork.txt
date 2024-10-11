@@ -1,0 +1,62 @@
+I am an IT engineer and expert in web development. Seeking new employment opportunities which utilize my ongoing professional training, 
+and expanding skill set and which allows for continued growth through expansion of my skills. 
+For the past over 5 years, I have been in the business of Web development and Designing. 
+I am particularly interested in the Web development. Specialties: PHP, Adobe ColdFusion, 
+Classic ASP, MSSQL, MySQL, HTML5, psd to HTML, CSS3, JavaScript/JQuery/AJAX.
+
+
+Technologies and concepts I deal with:
+
+Web Development
+
+Technologies:
+★ Core PHP
+★ HTML5
+★ CSS3
+★ jQuery
+★ AJAX
+★ JavaScript
+
+PHP Frameworks:
+
+★ Laravel
+★ CodeIgniter
+★ Symfony
+★ Cake PHP
+★ Yii
+★ Zend Framework
+
+PHP CMS:
+
+★ Wordpress
+★ Woocommerce
+★ Shopify
+★ Opencart
+★ Prestashop
+
+I specialize in fixing technical store issues, developing custom modules, customizing themes, and custom plugin development. I make WordPress plugins with integration in Woocommerce.
+
+Frontend:
+
+★ Bootstrap
+★ Angular.js
+★ React.js
+★ Backbone.js
+★ Vue.js
+★ Express.js
+★ Node.js
+
+Coldfusion
+
+★ Framework one
+★ CF Wheels
+★ FuseBox
+
+Classic ASP
+
+Python
+(a)Django
+
+Please have a look at my portfolio to ensure my work quality.
+
+It will be an honor to work with you

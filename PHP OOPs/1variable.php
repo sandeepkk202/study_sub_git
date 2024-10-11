@@ -49,6 +49,7 @@ function stat_counter(){
    static $count =1;
     echo $count."<br>";
     $count = $count + 1;
+//    $count = "hello";
 }
 stat_counter();
 stat_counter();
@@ -97,8 +98,21 @@ define( "LANGUAGE", "JAVA");
     
 // test 5
 echo "<br>".constant('LANGUAGE');
+
 //---------------------------------------------------------------------------------
-// Magic constant
+# Superglobals
+// $GLOBALS
+// $_SERVER
+// $_REQUEST
+// $_POST
+// $_GET
+// $_FILES
+// $_ENV
+// $_COOKIE
+// $_SESSION
+
+//---------------------------------------------------------------------------------
+// Magic constant 
 
 echo "<br>Magic line".__LINE__."<br>";
 echo __FILE__."<br>";
@@ -114,10 +128,17 @@ echo __DIR__."<br>";
       {
                 echo "method = ".__METHOD__;
       }
+      function doitagainwithcls()
+      {
+                echo "class = ".__CLASS__ ;
+      }
+
+    //   __TRAIT__
 }
 $obj=new trick();
 $obj->doit();
 $obj->doitagain();
+$obj->doitagainwithcls();
   
 
 

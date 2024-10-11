@@ -22,7 +22,7 @@ echo "<hr>";
 //foreach($directory as $x)
 //    echo $x.", ";
 
-#Sample 2:  Check for specific Files or Directory
+#Sample 2:  Check specificly it is Files or Directory
 # is_file(); or is_dir();
 //echo "<hr>";
 //$directory = array_diff($result, ['.', '..']);
@@ -32,7 +32,7 @@ echo "<hr>";
 //          echo $dir.", ";
 //      }
 //      if(is_dir($path."/". $dir)){
-//          echo $dir.", ";
+//          echo $dir."folder".", ";
 //      }
 //  }
 //echo "<hr>";
@@ -96,7 +96,7 @@ echo $content."<hr>";
 //fclose($fileHandler);
 
 # Write file - method2
-//file_put_contents($fileName, "This the modified by file_put_content() function"); //Rewrite
+//file_put_contents($fileName, "This is the modified by file_put_content() function"); //Rewrite
 
 # Read config file like (.ini)
 $fileIni = "testing2.ini";

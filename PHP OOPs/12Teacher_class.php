@@ -1,5 +1,5 @@
 <?php
-require_once "University_class.php";
+require_once "11University_class.php";
 class teacher extends university{
     public $teaName;
     public $teaAge;
@@ -22,5 +22,5 @@ class teacher extends university{
 }
 $uni1 = new university("Punjab University", "Patiala", "235");
 $tea1 = new teacher("Rakul", "25", "Digital", $uni1);
-$uni1->printUniDetail();
+$tea1->printUniDetail();
 $tea1->printTeaDetail();

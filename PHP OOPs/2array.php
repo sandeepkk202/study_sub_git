@@ -2,20 +2,18 @@
 
 $arr=[1,"2",3.7];
 
-# funaction to print array
- 
+# funaction to print array 
     var_dump($arr);
 
 //echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # Human readable   
 //    print_r($arr);
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
 # ACCESS AND PRINT ARRAY
 //    echo "$arr[1]";
-//    echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 //    echo $arr[1];
-//    echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
     
 # $arr is a Array Variable
 # $arr[0] is a Array Element
@@ -24,23 +22,23 @@ $arr=[1,"2",3.7];
 # Array has a length based on the number of the element it has.
 //echo "Array length : ".count($arr);
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";    
+   
 # Loop thru the array using for loop
 //for($x=0; $x < count($arr); $x++)
 //    echo $arr[$x].",";
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
-# Access array element inside the string using Constant
-//const ARRAY_ELEMENT = 1;
-//echo "{$arr[ARRAY_ELEMENT]}";
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+# Access array element inside the string using Constant
+const ARRAY_ELEMENT = 1;
+echo "{$arr[ARRAY_ELEMENT]}";
+
+
 # Foreach loop
 //$arr = ["sun", "mon", "tus", "wed", "thu", "fri", "sat"];
 //foreach($arr as $x)
 //    echo $x.", ";
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
 # Unset array (delete)
 //unset($arr[6]);
 //echo var_dump($arr);
@@ -53,25 +51,24 @@ $arr = ["sun" => "Sunday", "mon" => "Monday", "tus" => "Tusday", "wed" => "Wedne
 //foreach($arr as $xKey => $xValue)
 //    echo $xKey."=>"."$xValue<br>";
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
-# assinge value in associated Array
+# assinge new key & value in associated Array
 //$arr["another"] = "day";
 //echo var_dump($arr);
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
 # accesse Array value
 //echo $arr["tus"];
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
 # change value of a key
 //$arr["mon"] = "somvar";
 //echo var_dump($arr);
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
 # PRINT THE KEY
 //print_r(array_keys($arr));
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
 # ACCESS ONLY THE KEYS
 //foreach(array_keys($arr) as $xKey)
 //    echo $xKey." , ";
@@ -123,7 +120,7 @@ echo var_dump($arr);
 //        echo $innerValue." , ";
 //    echo "], ";}
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
 # sort() and rsort() for Indexed Array
 //$arr =[3,5,2,4,1];
 //print_r($arr);
@@ -156,7 +153,7 @@ echo var_dump($arr);
 //krsort($arr);
 //print_r($arr);
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
+
 # COPY ARRAY
 
 # Sample 1
@@ -183,24 +180,22 @@ echo var_dump($arr);
 //    $arr5[$xKey] = $x;
 //print_r($arr5);
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 
 # Convert STRING TO ARRAY
 //$days = "mon, tus, wed, thu, fri, sat";
-//$days_arr = explode(",",$days);
+//$days_arr = explode(",", $days);
 //print_r($days_arr);
 
 # Convert ARRAY TO STRING 
 //echo "<br>";
-//$days_str = implode(",",$days_arr);
+//$days_str = implode(",", $days_arr);
 //print_r($days_str);
 
-# Limited no of array element
+# Limited no. of array element
 //echo "<br>";
 //$Limited_days = explode(",", $days, 3);
 //print_r($Limited_days); for limit
 
-//echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 
 # Array Exercise
 //$company = [

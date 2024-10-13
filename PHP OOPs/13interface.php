@@ -3,6 +3,10 @@
 #'interface' Keyword is used to define interfaces.
 #'implements' Keyword is used to implements from interfaces.
 
+# A class can implement multiple interfaces (multiple inheritance).
+# Interfaces cannot have properties or concrete methods.
+# All methods defined in an interface must be public.
+
 interface car{
     function increaseSpeed();
     function decreaseSpeed();

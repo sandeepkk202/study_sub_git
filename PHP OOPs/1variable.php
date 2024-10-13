@@ -133,8 +133,9 @@ echo __DIR__."<br>";
                 echo "class = ".__CLASS__ ;
       }
 
-    //   __TRAIT__
-}
+      //  __TRAIT__
+      //  __NAMESPACE__
+    }
 $obj=new trick();
 $obj->doit();
 $obj->doitagain();

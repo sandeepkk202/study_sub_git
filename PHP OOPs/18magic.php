@@ -20,22 +20,17 @@ class user{
     function __call($name, $argu){
         echo "function $name is not avilable.".var_dump($argu);
     }
-// __construct()
-// __destruct()
+
 // __autoload()
-// __sleep()
-// __wakeup()
-// __call()	
-// __toString()
-// __invoke()
-// __get()	
-// __set()	
-// __set_state()
-// __isset()	
-// __clone()
-// __unset()
-// __clone()	
-// __debugInfo()
+
+//  ----------------------- magic methods ------------------------
+// __construct(), __destruct()
+// __call(), __callStatic()
+// __get(), __set()
+// __isset(), __unset()
+// __sleep(), __wakeup()
+// __serialize(), __unserialize()
+// __toString(), __invoke(), __set_state(), __clone(), __debugInfo()
 }
 
 $obj = new user();

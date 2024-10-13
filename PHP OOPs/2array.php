@@ -43,7 +43,6 @@ echo "{$arr[ARRAY_ELEMENT]}";
 //unset($arr[6]);
 //echo var_dump($arr);
 
-echo "<br><b>Line no.".__LINE__."</b>"."<hr>";
 # ================ ASSOCIATIVE ARRAY ================
 # ASSOCIATIVE array is pair of "key and value"
 $arr = ["sun" => "Sunday", "mon" => "Monday", "tus" => "Tusday", "wed" => "Wednesday", "thu" => "Thursday", "fri" => "Friday", "sat" => "Saturday"];
@@ -196,6 +195,16 @@ echo var_dump($arr);
 //$Limited_days = explode(",", $days, 3);
 //print_r($Limited_days); for limit
 
+# Split character to array
+// echo "<br>";
+// $string = "Hello";
+// $array = str_split($string);
+// print_r($array);
+
+# String is also in array form
+// echo "<br>";
+// $string = "Hello";
+// var_dump($string[1]); // --> "e"
 
 # Array Exercise
 //$company = [

@@ -31,7 +31,7 @@ function funName($param, n...){
 // }
 // echo add(5, 2);
 
-#retune type array
+# Example of type hinting (also known as type casting)
 //function getArray($limit) : array{
 //    $arrContainer = [];
 //    for($x=0; $x<=$limit; $x++)
@@ -41,35 +41,43 @@ function funName($param, n...){
 //$xArray = getArray(5);
 //print_r($xArray);
 
-#dynamic function
-//$dynmFun = "add";
-//$dynmFun = "sub";
-//echo $dynmFun(5, 6);
+# Dynamic function
+// $dynmFun = "add";
+// $dynmFun = "sub";
+// echo $dynmFun(5, 6);
 
-#Lambda/Anonymous function
-//$pointVar = function ($a, $b) : int{
+# Lambda/Anonymous function
+// $pointVar = function ($a, $b) : int{
 //    $x = $a + $b; 
 //    return $x; 
-//};
-//echo $pointVar(5, 3);
+// };
+// echo $pointVar(5, 3);
 
-#use variable inside function
-//$content = "sandeep kumar";
-//$pointVar = function () use($content){
+# If the function uses variables from outside its own scope, it becomes a closer function
+// $outsideVar = 10;
+// $pointVar = function ($a, $b) use ($outsideVar) : int {
+//    $x = $a + $b + $outsideVar; 
+//    return $x; 
+// };
+
+# Use outside variable inside function
+// $content = "sandeep kumar";
+// $pointVar = function () use($content){
 //    echo $content;
-//};
-//$pointVar(); 
+// };
+// $pointVar(); 
 
-#passing reference
-//$result = 0;
-//function add($a, $b, &$result = null){
+# Pass-by-reference 
+// $result = 0;
+// function add($a, $b, &$result = null){
 //    $result = $a + $b;
-//    
-//}
-//add(6, 9, $result);
-//echo $result;
+   
+// }
+// add(6, 9, $result);
+// echo $result;
 
-abcFilter([1,2,3,4], function($item){ return ($itme == 3) ? true: false;});
+# A callback function is a function that is passed as an argument to another function.
+abcFilter([1,2,3,4], function($item){ return ($item == 3) ? true: false;});
 
 function abcFilter($items, $fn){
       foreach($items as $key => $value) {

@@ -1,6 +1,9 @@
 <?php
 #many form with same method like:-
 
+# Can be achieved through method overriding (in inheritance) and method overloading (in some languages).
+# Allows for code reusability and easy maintenance.
+
 interface animal{    
     function eatFood();
 }

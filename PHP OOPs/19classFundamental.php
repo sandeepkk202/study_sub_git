@@ -137,3 +137,7 @@ $post3 = clone $post2;
     $db1 = new Database();
     $db1->hello();
 */
+
+// --------------------------------
+
+// perent::__construct("sandeep", 'age')

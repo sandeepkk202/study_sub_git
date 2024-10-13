@@ -18,6 +18,9 @@
 # mysqld --console (start sql)
   c:\mysql\bin\mysql -u root -p (enter) login
 
+    SHOW DATABASES;
+    USE database_name;
+
     CREATE DATABASE bd_name
     ALTER DATABASE bd_name 
     DROP DATABASE bd_name
@@ -188,7 +191,7 @@
     VIEW - It is a virtual table based on a result set of a database query.
     STORED PROCEDURE - It is a procedure stored in database which can be called using CALL statement. Stored procedure does not return a value.
     STORED FUNCTION - It is like function calls which can contain logic. It returns a single value and can be called from another statement.
-    TRIGGER - Trigger is program which is associated with a database table which can be invoked before or after insert, delete or update operations.
+    TRIGGER - Trigger is program which is associated with a database table which can be invoked before/after insert, delete or update operations.
     EVENT - Event is used to run a program or set of commands at defined schedule.
 
     CREATE VIEW user_lat_long AS SELECT name, latitude, longitude FROM users WHERE status = 'active';

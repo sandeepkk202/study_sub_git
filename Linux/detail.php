@@ -1,3 +1,5 @@
+<?php 
+/*
 It's a file system base
 
 /home, /root
@@ -79,3 +81,4 @@ service cron restart
 service cron stop
 
 ----------------------------------
+*/

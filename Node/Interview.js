@@ -145,7 +145,10 @@
 
 // 2. Closures
 /*
-    # Example of a Closure:
+    # Example of a Closure: 
+    - Closures allow you to create private variables that can’t be accessed from outside the function.
+        This is helpful for encapsulating data and creating a more controlled environment where only specific functions can access or modify the variables.
+        
     function outer() {
         let outerVar = "I'm from the outer function!";
         

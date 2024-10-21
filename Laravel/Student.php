@@ -32,4 +32,12 @@ class Student extends Model
 
     // protected $fillable = ['name', 'email', 'city', 'marks'];
 
+    #  Query Scopes:
+    // public function scopeActive($query)
+    // {
+    //     return $query->where('active', 1);
+    // }
+    // $activeStudent = Student::active()->get();
+
+    # Accessors and Mutators
 }

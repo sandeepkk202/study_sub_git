@@ -205,7 +205,7 @@
     1. Event-drive workflows through the sql stored procedure.  
 
     ------------------------
-    - ACID Properties in DBMS
+    - ACID Properties in DBMS - (ensure reliable processing of database transactions.)
     - What is database sharding?
     
 

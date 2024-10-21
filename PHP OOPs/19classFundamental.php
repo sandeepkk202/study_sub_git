@@ -65,9 +65,11 @@ class abc{
 # Dependency Injection 
 
 /*
-    Dependency Injection (DI) is a design pattern in which an object receives other objects that it
-    depends on. In PHP, DI is typically implemented through constructors, method injection,
-    or property injection. Below is an example of dependency injection using a constructor in PHP.
+    - Required dependencies to an object, rather than creating them within the object itself. By doing so,
+      it becomes easier to test, maintain and update the code.
+    - Dependency Injection (DI) is a design pattern in which an object receives other objects that it
+      depends on. In PHP, DI is typically implemented through constructors, method injection,
+      or property injection. Below is an example of dependency injection using a constructor in PHP.
 */
 
 // ----------------------------------------------------

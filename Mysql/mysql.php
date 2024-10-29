@@ -207,5 +207,7 @@
     ------------------------
     - ACID Properties in DBMS - (ensure reliable processing of database transactions.)
     - What is database sharding?
+    - Normalization
+    - CTE
     
 

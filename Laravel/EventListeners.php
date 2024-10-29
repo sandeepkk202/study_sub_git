@@ -1,5 +1,9 @@
 <?php
 /*
+    - Events in Laravel are a way to implement the event-driven programming paradigm, 
+    where actions and communication between different components of your application are orchestrated through events and event listeners. 
+    Events act as hooks/trigger.
+
 # Events and Listeners
     app/Events/Event1.php, Event2.php
     app/Listeners/Listener1.php, Listener2.php, Listener5.php

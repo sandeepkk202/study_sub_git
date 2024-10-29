@@ -1,5 +1,7 @@
 <?php
 
+### These are principle not Role ###
+
 /*
     1. Single Responsibility Principle (SRP)
     A class should have only one reason to change, meaning it should have only one job.
@@ -63,15 +65,29 @@ class FixedDiscount implements DiscountInterface {
 }
 
 class DiscountCalculator {
-    public function applyDiscount(DiscountInterface $discount, $amount) {
-        return $discount->calculate($amount);
+    private DiscountInterface $discount;
+
+    public function __construct(DiscountInterface $discount) {
+        $this->discount = $discount;
+    }
+
+    public function applyDiscount(float $amount): float {
+        return $this->discount->calculate($amount);
     }
 }
+
+    $percentageDiscount = new PercentageDiscount();
+    $calculator = new DiscountCalculator($percentageDiscount);
+    echo $calculator->applyDiscount(1000); // Output: 100
+
+    $fixedDiscount = new FixedDiscount();
+    $calculator = new DiscountCalculator($fixedDiscount);
+    echo $calculator->applyDiscount(1000); // Output: 5
 
 
 /*
     3. Liskov Substitution Principle (LSP)
-    Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+    - All this is stating is that every subclass/derived class should be substitutable for their base/parent class.
 */
 
 // Bad Example:
@@ -138,7 +154,7 @@ class Square implements Shape {
 
 
 /*
-    4. Interface Segregation Principle (ISP)
+    4. Interface Segregation->अकेलापन Principle (ISP) 
     A client should not be forced to implement interfaces it does not use.
 */
 
@@ -199,7 +215,7 @@ class RobotWorker implements WorkableInterface {
     High-level modules should not depend on low-level modules. Both should depend on abstractions.
 */
 
-// Bad Example:
+// Bad Example: we have tightly coupled the PasswordReminder class to the MySQLConnection
 class MySQLConnection {
     public function connect() {
         // Connect to MySQL database
@@ -237,4 +253,20 @@ class PasswordReminder {
     public function __construct(DBConnectionInterface $dbConnection) {
         $this->dbConnection = $dbConnection;
     }
+
+    public function sendReminder() {
+        $this->dbConnection->connect();
+        // Logic to send the password reminder goes here
+        echo "Password reminder sent.";
+    }
 }
+
+    // We can now pass any connection type that implements the DBConnectionInterface
+    $mysqlConnection = new MySQLConnection();
+    $passwordReminder = new PasswordReminder($mysqlConnection);
+    $passwordReminder->sendReminder();
+
+    // If we want to switch to PostgreSQL, we can easily do so
+    $postgresConnection = new PostgreSQLConnection();
+    $passwordReminder = new PasswordReminder($postgresConnection);
+    $passwordReminder->sendReminder();

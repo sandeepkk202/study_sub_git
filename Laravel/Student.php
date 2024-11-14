@@ -40,4 +40,19 @@ class Student extends Model
     // $activeStudent = Student::active()->get();
 
     # Accessors and Mutators
+
+    # model events / observer
+    // creating: Call Before Create Record.
+    // created: Call After Created Record.
+    // updating: Call Before Update Record.
+    // updated: Class After Updated Record.
+    // deleting: Call Before Delete Record.
+    // deleted: Call After Deleted Record.
+    // retrieved: Call Retrieve Data from Database.
+    // saving: Call Before Creating or Updating Record.
+    // saved: Call After Created or Updated Record.
+    // restoring: Call Before Restore Record.
+    // restored: Call After Restore Record.
+    // replicating: Call on replicate Record.
+    
 }

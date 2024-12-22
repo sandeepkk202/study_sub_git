@@ -37,52 +37,63 @@ class EmailSender {
 */
 
 // Bad Example:
-class Discount {
-    public function calculate($type, $amount) {
-        if ($type === 'percentage') {
-            return $amount * 0.10;
-        } elseif ($type === 'fixed') {
-            return 5;
+class PaymentProcessor {
+    public function processPayment(string $paymentType, float $amount): string {
+        switch ($paymentType) {
+            case 'credit_card':
+                return "Paid $amount using Credit Card.";
+            case 'paypal':
+                return "Paid $amount using PayPal.";
+            default:
+                return "Payment method not supported.";
         }
     }
 }
+// Adding a New Payment Method like Stripe in switch case, modify the existing processPayment method it is Violation of OCP.
 
 // Refactored (Good) Example:
-interface DiscountInterface {
-    public function calculate($amount);
+interface PaymentMethod {
+    public function pay(float $amount): string;
 }
 
-class PercentageDiscount implements DiscountInterface {
-    public function calculate($amount) {
-        return $amount * 0.10;
+class CreditCardPayment implements PaymentMethod {
+    public function pay(float $amount): string {
+        return "Paid $amount using Credit Card.";
     }
 }
 
-class FixedDiscount implements DiscountInterface {
-    public function calculate($amount) {
-        return 5;
+class PayPalPayment implements PaymentMethod {
+    public function pay(float $amount): string {
+        return "Paid $amount using PayPal.";
     }
 }
 
-class DiscountCalculator {
-    private DiscountInterface $discount;
-
-    public function __construct(DiscountInterface $discount) {
-        $this->discount = $discount;
-    }
-
-    public function applyDiscount(float $amount): float {
-        return $this->discount->calculate($amount);
+class PaymentProcessor {
+    public function processPayment(PaymentMethod $paymentMethod, float $amount): string {
+        return $paymentMethod->pay($amount);
     }
 }
 
-    $percentageDiscount = new PercentageDiscount();
-    $calculator = new DiscountCalculator($percentageDiscount);
-    echo $calculator->applyDiscount(1000); // Output: 100
+// Adding a New Payment Method. No changes are needed in the existing classes.
+class StripePayment implements PaymentMethod {
+    public function pay(float $amount): string {
+        return "Paid $amount using Stripe.";
+    }
+}
 
-    $fixedDiscount = new FixedDiscount();
-    $calculator = new DiscountCalculator($fixedDiscount);
-    echo $calculator->applyDiscount(1000); // Output: 5
+$processor = new PaymentProcessor();
+
+$creditCardPayment = new CreditCardPayment();
+echo $processor->processPayment($creditCardPayment, 100.00);
+// Output: Paid 100 using Credit Card.
+
+$paypalPayment = new PayPalPayment();
+echo $processor->processPayment($paypalPayment, 50.00);
+// Output: Paid 50 using PayPal.
+
+$stripePayment = new StripePayment();
+echo $processor->processPayment($stripePayment, 75.00);
+// Output: Paid 75 using Stripe.
 
 
 /*

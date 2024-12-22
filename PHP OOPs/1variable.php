@@ -26,10 +26,10 @@ echo "$Name is not equal to $name"."<br>";
 $counter = 1; 
 function show_counter(){
     $counter =2;
-    echo "Function_counter =".$counter."<br>";
+    echo "Function_counter =".$counter."<br>"; // Function_counter =2
 }
  show_counter();
-echo "outer_counter =$counter <br>";
+echo "outer_counter =$counter <br>"; // outer_counter =1
 
 //Global Variable
 global $counter;
@@ -73,12 +73,14 @@ echo isset($$counter_of_counter) ? "here is set" : "not set";
     
 // Define constant
 /* 1.No need to use $ symbol.
-   2.Constant define only via define method.
-   3.value can be assigned only once.
-   4.contant has Global scope.
-   5.you can use mathod constant(''); for value.
+   2.value can be assigned only once.
+   3.contant has Global scope.
+   4.you can use mathod constant(''); for value.
+   5.Cannot be declared inside conditional blocks or loops (e.g., if or for) using const but can with define()
     define( NAME, VALUE);
 */    
+
+const CONSTANT_NAME = "value"; // preferred in modern PHP
    
 define( "LANGUAGE", "PHP");
     $lang = LANGUAGE;
@@ -101,15 +103,15 @@ echo "<br>".constant('LANGUAGE');
 
 //---------------------------------------------------------------------------------
 # Superglobals
-// $GLOBALS
-// $_SERVER
-// $_REQUEST
-// $_POST
-// $_GET
-// $_FILES
-// $_ENV
-// $_COOKIE
-// $_SESSION
+// $GLOBALS     - Contains all global variables in the script.
+// $_SERVER     - Contains information about headers, paths, and script locations.
+// $_REQUEST    - Contains the combined contents of $_GET, $_POST, and $_COOKIE.
+// $_POST       - Used to collect form data sent with the POST method.
+// $_GET        - Used to collect data sent via URL query parameters.
+// $_FILES      - Used to handle file uploads via HTTP POST.
+// $_ENV        - Contains environment variables set in the server or script.
+// $_COOKIE     - Contains all cookies sent by the client.
+// $_SESSION    - Used to store session variables, which persist across multiple page requests for a single user.
 
 //---------------------------------------------------------------------------------
 // Magic constant 

@@ -36,6 +36,37 @@ echo $animal->makeSound(); // Output: Bark
     different parameter lists (different types or number of parameters) within the same class. However, 
     PHP does not support true method overloading as seen in some other languages like Java or C#. 
 */
+
+class Calculator {
+    // Method overloading for instance methods
+    public function __call($name, $arguments) {
+        if ($name === 'add') {
+            switch (count($arguments)) {
+                case 2:
+                    return $arguments[0] + $arguments[1];
+                case 3:
+                    return $arguments[0] + $arguments[1] + $arguments[2];
+                default:
+                    throw new Exception("Invalid number of arguments for add method");
+            }
+        }
+    }
+
+    // Method overloading for static methods
+    public static function __callStatic($name, $arguments) {
+        if ($name === 'multiply') {
+            return array_product($arguments);
+        }
+    }
+}
+
+// Instance method overloading
+$calc = new Calculator();
+echo $calc->add(10, 20) . PHP_EOL; // Outputs: 30
+echo $calc->add(5, 10, 15) . PHP_EOL; // Outputs: 30
+
+// Static method overloading
+echo Calculator::multiply(2, 3, 4) . PHP_EOL; // Outputs: 24
  
 // ----------------------------------------------------
 
